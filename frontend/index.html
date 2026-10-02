@@ -1,0 +1,303 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+
+    <title>ChatMate - AI Learning & Coding Companion</title>
+
+    <link rel="stylesheet"
+          href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.7.2/css/all.min.css">
+
+    <link rel="stylesheet" href="css/style.css">
+</head>
+
+<body>
+
+    <div class="app">
+
+        <!-- Sidebar -->
+        <aside class="sidebar">
+            
+            <div class="logo">
+                <div class="logo-icon">
+                    <i class="fa-solid fa-robot"></i>
+                </div>
+
+                <span>Chat<span>Mate</span></span>
+            </div>
+
+            <button class="new-chat" id="newChatBtn">
+                <i class="fa-solid fa-plus"></i>
+                New Chat
+            </button>
+
+            <div class="sidebar-title">
+                Recent Chats
+            </div>
+
+            <div class="chat-history" id="chatHistory">
+
+                <div class="history-item active">
+                    <i class="fa-regular fa-message"></i>
+                    <span>New Conversation</span>
+                </div>
+
+            </div>
+
+            <div class="sidebar-bottom">
+
+                <button class="sidebar-btn">
+                    <i class="fa-solid fa-gear"></i>
+                    Settings
+                </button>
+
+                <button class="sidebar-btn">
+                    <i class="fa-solid fa-circle-info"></i>
+                    Help
+                </button>
+
+            </div>
+
+        </aside>
+
+
+        <!-- Main Chat -->
+        <main class="chat-area">
+
+            <!-- Header -->
+           <header class="chat-header">
+
+    <!-- Mobile Menu -->
+    <div class="mobile-menu">
+        <i class="fa-solid fa-bars"></i>
+    </div>
+
+
+    <!-- ChatMate Brand -->
+    <div class="assistant-info">
+
+        <div class="chatmate-brand">
+            ChatMate
+        </div>
+
+        <div class="online-status">
+            <span class="online-dot"></span>
+            <span>Online</span>
+        </div>
+
+    </div>
+
+
+    <!-- Right Actions -->
+    <div class="header-actions">
+
+        <!-- Clear Chat -->
+        <button
+            class="clear-chat-btn"
+            title="Clear Chat"
+            id="clearChatBtn">
+
+            <i class="fa-solid fa-trash"></i>
+
+        </button>
+
+
+        <!-- Profile -->
+        <div class="profile-container">
+
+            <button
+                class="profile-button"
+                id="profileBtn"
+                title="Profile">
+
+                <div
+                    class="profile-avatar"
+                    id="profileAvatar">
+                    AS
+                </div>
+
+                <div
+                    class="profile-name"
+                    id="profileName">
+                    Adi Shelke
+                </div>
+
+                <i
+                    class="fa-solid fa-chevron-down profile-arrow">
+                </i>
+
+            </button>
+
+
+            <!-- Profile Dropdown -->
+            <div
+                class="profile-dropdown"
+                id="profileDropdown">
+
+
+                <!-- User Info -->
+                <div class="profile-user">
+
+                    <div
+                        class="profile-avatar large"
+                        id="dropdownAvatar">
+                        AS
+                    </div>
+
+                    <div class="profile-user-info">
+
+                        <strong id="dropdownName">
+                            Adi Shelke
+                        </strong>
+
+                        <span id="dropdownEmail">
+                            email@example.com
+                        </span>
+
+                    </div>
+
+                </div>
+
+
+                <div class="profile-divider"></div>
+
+
+                <!-- Profile -->
+                <button
+                    class="profile-menu-item"
+                    id="profileMenuBtn">
+
+                    <i class="fa-regular fa-user"></i>
+
+                    <span>Profile</span>
+
+                </button>
+
+
+                <!-- Add Account -->
+                <button
+                    class="profile-menu-item"
+                    id="addAccountBtn">
+
+                    <i class="fa-solid fa-user-plus"></i>
+
+                    <span>Add another account</span>
+
+                </button>
+
+
+                <!-- Logout -->
+                <button
+                    class="profile-menu-item logout-item"
+                    id="logoutBtn">
+
+                    <i class="fa-solid fa-right-from-bracket"></i>
+
+                    <span>Logout</span>
+
+                </button>
+
+            </div>
+
+        </div>
+
+    </div>
+
+</header>
+
+            <!-- Messages -->
+            <section class="messages" id="messages">
+
+                <!-- Welcome -->
+                <div class="welcome">
+
+                    <div class="welcome-icon">
+                        <i class="fa-solid fa-wand-magic-sparkles"></i>
+                    </div>
+
+                    <h1>Hi, I'm ChatMate 👋</h1>
+
+                    <p>
+                        Your AI Learning & Coding Companion
+                    </p>
+
+                    <span>
+                        Ask me anything about learning, coding,
+                        projects or technology.
+                    </span>
+
+                </div>
+
+
+                <!-- Suggestions -->
+                <div class="suggestions">
+
+                    <button class="suggestion">
+                        <i class="fa-brands fa-java"></i>
+                        <div>
+                            <strong>Learn Java</strong>
+                            <small>Explain Java basics</small>
+                        </div>
+                    </button>
+
+                    <button class="suggestion">
+                        <i class="fa-solid fa-code"></i>
+                        <div>
+                            <strong>Explain Code</strong>
+                            <small>Help me understand code</small>
+                        </div>
+                    </button>
+
+                    <button class="suggestion">
+                        <i class="fa-solid fa-laptop-code"></i>
+                        <div>
+                            <strong>Build a Project</strong>
+                            <small>Give me project guidance</small>
+                        </div>
+                    </button>
+
+                    <button class="suggestion">
+                        <i class="fa-solid fa-graduation-cap"></i>
+                        <div>
+                            <strong>Study Help</strong>
+                            <small>Explain a topic simply</small>
+                        </div>
+                    </button>
+
+                </div>
+
+            </section>
+
+
+            <!-- Input -->
+            <div class="input-section">
+
+                <div class="input-box">
+
+                    <textarea
+                        id="messageInput"
+                        placeholder="Ask ChatMate anything..."
+                        rows="1"></textarea>
+
+                    <button id="sendBtn">
+                        <i class="fa-solid fa-paper-plane"></i>
+                    </button>
+
+                </div>
+
+                <p class="input-note">
+                    ChatMate can make mistakes. Check important information.
+                </p>
+
+            </div>
+
+        </main>
+
+    </div>
+
+    <script src="https://cdn.jsdelivr.net/npm/marked/marked.min.js"></script>
+    <script src="js/script.js"></script>
+
+</body>
+</html>
